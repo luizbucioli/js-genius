@@ -1,0 +1,67 @@
+@import url('media.css');
+
+body{
+    margin: 0;
+    /* background-color: rgb(208, 255, 239); */
+    background-color: rgb(51, 51, 51);
+}
+
+.main-game{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genius{
+    display: grid;
+    grid-template-areas: 'green red' 'yellow blue';
+    grid-gap: 0.625rem;
+    border: 0.063rem solid #fff;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 43.75rem;
+    height: 43.75rem;
+    padding: 0.313rem;
+}
+.blue{
+   grid-area: blue; 
+   background-color: blue;
+   border-bottom-right-radius: 100%;
+   border: 0.5rem solid #2c2c2c;
+   cursor: pointer;
+}
+.red{
+    grid-area: red;
+    background-color: red;
+    border-top-right-radius: 100%;
+    border: 0.5rem solid #2c2c2c;
+    cursor: pointer;
+}
+.yellow{
+    grid-area: yellow;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+    border: 0.5rem solid #2c2c2c;
+    cursor: pointer;
+}
+.green{
+    grid-area: green;
+    background-color: green;
+    border-top-left-radius: 100%;
+    border:  0.5rem solid #2c2c2c;
+    cursor: pointer;
+}
+.selected{
+    box-shadow: inset 1rem 0.5rem 2rem #00000085;
+    opacity: color 0.4;
+}
+.info{
+    position: absolute;
+    top: 1rem;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
