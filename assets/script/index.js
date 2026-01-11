@@ -1,18 +1,38 @@
 var order = [];
 var clickedOrder = [];
 var score = 0;
-
-
 //0 - green
 //1 - red
 //2 - yellow
 //3 - blue
 
+function handleMouseEnter(){
+    this.classList.add('level_btn--hovered');
+    document.body.id = `${this.id}-hovered`;
+}
+
+function handleMouseLeave(){
+    this.classList.remove('level_btn--hovered');
+    document.body.id = '';
+}
+
+function addEventListersToBtn(){
+    const buttonsElements = document.getElementsByClassName('level__btn');
+    
+    for(let i = 0; i < buttonsElements.length; i++){
+        const button = buttonsElements[i];
+        button.addEventListener('mouseenter', handleMouseEnter);
+        button.addEventListener('mouseleave', handleMouseLeave);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', addEventListersToBtn, false);
+
+
 var blue = document.querySelector('.blue');
 var red = document.querySelector('.red');
 var green = document.querySelector('.green');
 var yellow = document.querySelector('.yellow');
-
 
 //cria ordem aleatorio de cores
 function shuffleOrder() {
