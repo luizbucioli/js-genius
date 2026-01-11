@@ -10,33 +10,36 @@ body{
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
-.g-difficulty{
+.g-container{
+    width: 100%;
     display: flex;
-    position: absolute;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.g-container__difficulty{
     justify-content: center;
     align-items: center;
-    top: 1rem;
-
+    margin: 0.625rem;
 }
 h1{
     font-size: 2rem;
-    position: relative;
     text-transform: uppercase;
+    text-align: center;
 }
 .g-difficulty__level{
     display: flex;
     justify-content: center;    
     align-items: center;
-    position: absolute;
-    top: 2.5rem;
     background-color: black;
     height: 100%;
     width: 100%;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     font-weight: bolder;
 }
 .level__btn{
@@ -44,16 +47,16 @@ h1{
     height: 100%;
     width: 100%;
     background-color: black;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     cursor: pointer;
-    padding: 6px;
+    padding: 0.5rem;
     transition: .5s ease-in-out;
 
     h2{
         text-align: center;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.5rem;
         transition: 0.5 ease-in-out;
     }
 }
@@ -66,7 +69,22 @@ h1{
     }
 }
 
-.genius{
+.g-container__score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: black;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    margin: 0.625rem;
+}
+.g-container__score h1, h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.g-container-genius_genius{
     display: grid;
     grid-template-areas: 'green red' 'yellow blue';
     grid-gap: 0.625rem;
@@ -106,6 +124,6 @@ h1{
     cursor: pointer;
 }
 .selected{
-    box-shadow: inset 1rem 0.5rem 2rem #00000085;
+    box-shadow: inset 1rem 2rem 2rem #00000085;
     opacity: color 0.4;
 }

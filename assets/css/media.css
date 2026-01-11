@@ -1,53 +1,53 @@
 @media (max-width: 2560px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 45rem;
         max-height: 45rem;
     }
 }
 @media (max-width: 1440px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 40rem;
         max-height: 40rem;
     }
 }
 @media (max-width: 1200px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 40rem;
         max-height: 40rem;
     }
 }
 @media (max-width: 1024px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 35rem;
        max-height: 35rem;
     }
 }
 @media (max-width: 768px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 30rem;
         max-height: 30rem;
     }
 }
 @media (max-width: 600px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 25rem;
         max-height: 25rem;
     }
 }
 @media (max-width: 500px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 20rem;
         max-height: 20rem;
     }
 }
 @media (max-width: 400px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 18rem;
         max-height: 18rem;
     }
 }
 @media (max-width: 320px){
-    .genius{
+    .g-container-genius_genius{
         max-width: 15rem;
         max-height: 15rem;
     }
