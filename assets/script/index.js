@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', addEventListersToBtn, false);
 
 //função nivel fácil
 function levelBtnEase(){
-        //cria ordem aleatorio de cores
+    //cria ordem aleatorio de cores
     function shuffleOrder() {
         var colorOrder = Math.floor(Math.random() * 4);
         order[order.length] = colorOrder;
@@ -76,7 +76,6 @@ function levelBtnEase(){
             }
         }
         if(clickedOrder.length == order.length){
-            numberScore();
             alert(`Pontuação: ${score}\nVocê acertou!! Iniciando próximo nível! `)
             nextLevel();
         }
@@ -107,6 +106,7 @@ function levelBtnEase(){
 
     //função para proxima nível do jogo
     function nextLevel(){
+        numberScore();        
         score++;
         shuffleOrder();
     }
@@ -123,9 +123,9 @@ function levelBtnEase(){
 
     //função do incio do jogo
     function playGame(){
-        numberScore();
         alert('Bem vindo ao Gênesis! Iniciando novo jogo!')
         score = 0;
+        numberScore();
 
         nextLevel();
     }
@@ -141,7 +141,7 @@ function levelBtnEase(){
 
 //função nivel Médio
 function levelBtnMedium(){
-        //cria ordem aleatorio de cores
+    //cria ordem aleatorio de cores
     function shuffleOrder() {
         var colorOrder = Math.floor(Math.random() * 4);
         order[order.length] = colorOrder;
@@ -205,12 +205,14 @@ function levelBtnMedium(){
 
     //função para proxima nível do jogo
     function nextLevel(){
-        score++;
+        numberScore();        
+        score++;      
         shuffleOrder();
     }
 
     //função para game over
     function gameOver(){
+        numberScore();        
         alert(`Pontuação ${score}!\nVocê perdeu o jogo!\nClique em OK Para iniciar um jogo novo`)
         order = []
         clickedOrder = []
@@ -222,6 +224,7 @@ function levelBtnMedium(){
     function playGame(){
         alert('Bem vindo ao Gênesis! Iniciando novo jogo!')
         score = 0;
+        numberScore();        
 
         nextLevel();
     }
@@ -237,7 +240,7 @@ function levelBtnMedium(){
 
 //função nivel Difícil
 function levelBtndifficult(){
-        //cria ordem aleatorio de cores
+    //cria ordem aleatorio de cores
     function shuffleOrder() {
         var colorOrder = Math.floor(Math.random() * 4);
         order[order.length] = colorOrder;
@@ -301,12 +304,14 @@ function levelBtndifficult(){
 
     //função para proxima nível do jogo
     function nextLevel(){
-        score++;
+        numberScore();
+        score++;        
         shuffleOrder();
     }
 
     //função para game over
     function gameOver(){
+        numberScore();        
         alert(`Pontuação ${score}!\nVocê perdeu o jogo!\nClique em OK Para iniciar um jogo novo`)
         order = []
         clickedOrder = []
@@ -331,12 +336,11 @@ function levelBtndifficult(){
     playGame();
 }
 
-// function numberScore () {
-//     const point = document.getElementById('score');
-//     const newScore = document.createElement('p');
-//     newScore.textContent = `<h2>${score}</h2>`;
-//     point.appendChild(newScore);
-// }
+//Função para imprimir a pontuação
+function numberScore () {
+    const point = document.getElementById('score');
+    point.innerText = score;
+}
 
 levelEase.onclick = () => {
     console.log(levelBtnEase())
